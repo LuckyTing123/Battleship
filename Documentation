@@ -1,0 +1,117 @@
+Need a list of all the files, and what each file is for
+(description). Decide where this is stored. Put on wiki.
+* Are some files (code or resources) not being used or not needed?
+Create a list and share on wiki.
+DeploymentController.vb
+The DeploymentController controls the players actions
+during the deployment phase.
+
+DiscoveryControoller.vb
+The battle phase is handled by the DiscoveryController.
+
+EndingGameController.vb
+The EndingGameController is responsible for managing the interactions at the end
+ of a game.
+
+GameController.vb
+The GameController is responsible for controlling the game,
+ managing user input, and displaying the current state of the
+game.
+
+GameLogic.vb
+Open a new graphics window load resources and into the loop free resources and close audio to end the program.
+
+GameResources.vb
+The Resources Class stores all of the Games Media Resources, such as Images, Fonts
+ Sounds, Music.
+
+GameState.vb
+The GameStates represent the state of the Battleships game play.
+This is used to control the actions and view displayed to
+ the player.
+
+HighScoreController.vb
+ Controls displaying and collecting high score data.
+Data is saved to a file.
+
+MenuController.vb
+The menu controller handles the drawing and user interactions
+from the menus in the game. These include the main menu, game
+ menu and the settings menu.
+
+UtilityFunctions.vb
+This includes a number of utility methods for
+drawing and interacting with the Mouse.AlhardPlayer.vb
+
+AIHardPlayer is a type of player. This AI will know directions of ships
+when it has found 2 ship tiles and will try to destroy that ship. If that ship
+ is not destroyed it will shoot the other way. Ship still not destroyed, then
+ the AI knows it has hit multiple ships. Then will try to destoy all around tiles
+ that have been hit.
+AlMediumPlyer.vb
+The AIMediumPlayer is a type of AIPlayer where it will try and destroy a ship
+ if it has found a ship
+AlOption.vb
+ The different AI levels.
+ The different AI levels.
+ Medium, marks squares around hits
+As medium, but removes shots once it misses
+AlPlyer.vb
+The AIPlayer is a type of player. It can readomly deploy ships, it also has the
+ functionality to generate coordinates and shoot at tiles
+
+AttackResult.vb
+AttackResult gives the result after a shot has been made.
+
+BattleShipsGame.vb
+The BattleShipsGame controls a big part of the game. It will add the two players
+ to the game and make sure that both players ships are all deployed before starting the game.
+ It also allows players to shoot and swap turns between player. It will also check if players 
+ are destroyed.
+
+Direction.vb
+The direction the ship can be oriented.
+
+ISeaGrid.vb
+The ISeaGrid defines the read only interface of a Grid. This
+allows each player to see and attack their opponents grid.
+
+Player.vb
+Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
+all ships are deployed and if all ships are detroyed. A Player can also attach.
+
+
+ResultOfAttack.vb
+The result of an attack.
+The player hit something
+The player destroyed a ship
+That location was already shot.
+The player killed all of the opponents ships
+The player missed
+
+SeaGrid.vb
+The SeaGrid is the grid upon which the ships are deployed.
+The grid is viewable via the ISeaGrid interface as a read only
+grid. This can be used in conjuncture with the SeaGridAdapter to 
+mask the position of the ships.
+
+SeaGridAdapter.vb
+The SeaGridAdapter allows for the change in a sea grid view. Whenever a ship is
+presented it changes the view into a sea tile instead of a ship tile.
+
+Ship.vb
+A Ship has all the details about itself. For example the shipname,
+ size, number of hits taken and the location. Its able to add tiles,
+remove, hits taken and if its deployed and destroyed.
+
+ShipName.vb
+The names of all of the ships in the game
+
+Tile.vb
+Tile knows its location on the grid, if it is a ship and if it has been 
+shot before
+
+TileView.vb
+ The values that are visable for a given tile.
+
+
